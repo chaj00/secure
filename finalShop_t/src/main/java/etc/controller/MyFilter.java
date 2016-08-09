@@ -19,7 +19,8 @@ public class MyFilter implements Filter {
 	@Override
 	public void doFilter(ServletRequest arg0, ServletResponse arg1, FilterChain chain)
 			throws IOException, ServletException {
-		chain.doFilter(arg0, arg1);
+		
+		chain.doFilter(arg0, arg1);   //실행하지 않으면 다음 필터 또는 서블릿도 실행이 안됨..
 	}
 
 	@Override
