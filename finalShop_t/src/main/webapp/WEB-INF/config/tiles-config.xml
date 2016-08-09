@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+	<definition name="indexTemplate" template="/WEB-INF/layout/indexLayout.jsp">
+		<put-attribute name="top" value="/WEB-INF/layout/top.jsp" />
+		<put-attribute name="banner" value="/WEB-INF/product/topproduct.jsp" />
+		<put-attribute name="content" value="/WEB-INF/product/prdlist.jsp" />
+	</definition>
+	<definition name="pageTemplate" template="/WEB-INF/layout/mainLayout.jsp">
+		<put-attribute name="top" value="/WEB-INF/layout/top.jsp" />
+		<put-attribute name="content" value="/WEB-INF/product/prdlist.jsp" />
+	</definition>
+	<definition name="adminTemplate"
+			template="/WEB-INF/adminlayout/adminlayout.jsp">
+		<put-attribute name="header"
+				value="/WEB-INF/layout/top.jsp"/>
+		<put-attribute name="left"
+				value="/WEB-INF/adminlayout/adminleft.jsp"/>
+		<put-attribute name="content"
+				value="/WEB-INF/adminlayout/content.jsp"/>
+		
+	</definition>
+	<definition name="index" extends="indexTemplate">
+	</definition>
+	<definition name="product/list" extends="pageTemplate">
+	</definition>
+	<definition name="product/read" extends="pageTemplate">
+		<put-attribute name="content" value="/WEB-INF/product/proRead.jsp" />
+	</definition>
+	
+	<definition name="member/login" extends="pageTemplate">
+		<put-attribute name="content" value="/WEB-INF/member/login.jsp" />
+	</definition>
+	
+	<definition name="product/commentResult" extends="adminTemplate">
+		<put-attribute name="content" value="/WEB-INF/product/commentResult.jsp" />
+	</definition>
+	
+	
+	
+	<definition name="admin" extends="adminTemplate">	
+	</definition>
+</tiles-definitions>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="product.dto.ProductDTO" alias="product"/>
+		<typeAlias type="member.dto.MemberDTO" alias="member"/>
+		<typeAlias type="product.dto.ProductCommentDTO" 
+					alias="procomment"/>
+		<typeAlias type="product.dto.ProductCommentResultDTO" 
+					alias="procommentResult"/>
+					
+	</typeAliases>
+	<mappers>
+		<mapper resource="mapper/ProductMapper.xml"/>
+		<mapper resource="mapper/ProductCommentMapper.xml"/>
+		<mapper resource="mapper/MemberMapper.xml"/>
+	</mappers>
+</configuration>
